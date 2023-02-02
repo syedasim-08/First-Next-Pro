@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
+import Head from 'next/head'
 
 const userLIst = () => {
 
@@ -28,13 +29,18 @@ const userLIst = () => {
 
   return (
     <div>
-        <Link href="/">
+      <Head>
+        <title>
+          WebDev
+        </title>
+      </Head>
+        {/* <Link href="/">
         Home
-        </Link>
-        <h1>Next JS Client Side Data Fetching</h1>
+        </Link> */}
+        <h1>Next JS Data Fetching at Client Side</h1>
 
         {
-          postData.length > 0 ? postData.map((post)=><h3>{post.title}</h3>)
+          postData.length > 0 ? postData.map((post)=><p>{post.title}</p>)
           :
           <h1>No Data Found</h1>
           
