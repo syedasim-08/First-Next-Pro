@@ -19,8 +19,8 @@ export default function Home({users}) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-     <h1>Next JS pre-rendering</h1>
-     <Link href="/users">Posts</Link>
+     <h1>Next JS pre-rendering at server side</h1>
+     <Link href="/users">Click Here for Client Side Data Fetching</Link>
      {
       users.map(user=> <div key={user.id}>
         <p>{user.name}</p>
