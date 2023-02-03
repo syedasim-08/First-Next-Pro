@@ -22,14 +22,19 @@ export default function Home({users}) {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       {/* <Nav /> */}
-     <h1>Next JS data fetching at server side</h1>
+     <h1 style={{textAlign:"center"}}>Next JS data fetching at server side</h1>
+     <br />
      {/* <Link href="/users">Click Here for Client Side Data Fetching</Link> */}
      {
       users.map(user=> 
+
+        <div style={{textAlign:'center'}}className={styles.card}>
+        
         <ul key={user.id}>
-        <li>{user.name}</li>
+        <li>{`${user.id}. ${user.name}`}</li>
         <li>{user.email}</li>
-        </ul>) 
+        <li>{user.website}</li>
+        </ul><br /></div>) 
      }
     </>
   )
@@ -44,7 +49,7 @@ export async function getStaticProps() {
 
   return {
     props : {
-      users : data
+      users : data.slice(0,3)
     }
   }
 

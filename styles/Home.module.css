@@ -218,7 +218,8 @@
     position: fixed;
     width: 100%;
   }
-
+  
+ 
   .description p {
     align-items: center;
     inset: 0 0 auto;
@@ -275,4 +276,9 @@
   to {
     transform: rotate(0deg);
   }
+}
+
+.card ul {
+  
+  list-style: none;
 }

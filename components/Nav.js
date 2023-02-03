@@ -14,8 +14,12 @@ const Nav = () => {
 
     </li>
     <li>
+        <Link href="/albums">Albums</Link>
+
+    </li>
+    <li>
       
-        <Link href="/users">Posts</Link>
+        <Link href="/posts">Posts</Link>
         
     
     </li>
