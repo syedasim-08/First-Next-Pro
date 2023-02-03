@@ -33,29 +33,44 @@ export default Album
 
 export async function getStaticPaths() {
 
+
+  const response = await fetch(`https://jsonplaceholder.typicode.com/albums`)
+
+  const resData = await response.json();
+
+  const paths = resData.map((data)=>{
+    return {
+      params :{ 
+        albumId : `${data.id}`
+      }
+    }
+  })
+
+
   return {
-    paths :[
-      {
-        params : { albumId : '1' }
-      },
-      {
-        params : { albumId : '2' }
-      },
-      {
-        params : { albumId : '3' }
-      },
-      {
-        params : { albumId : '4' } 
-      },
-      {
-        params : { albumId : '5' }
-      },
-      {
-        params : { albumId : '6'}
-      },
+    // paths :[
+    //   {
+    //     params : { albumId : '1' }
+    //   },
+    //   {
+    //     params : { albumId : '2' }
+    //   },
+    //   {
+    //     params : { albumId : '3' }
+    //   },
+    //   {
+    //     params : { albumId : '4' } 
+    //   },
+    //   {
+    //     params : { albumId : '5' }
+    //   },
+    //   {
+    //     params : { albumId : '6'}
+    //   },
      
 
-    ],
+    // ],
+    paths : paths,
     fallback : false,
   }
 

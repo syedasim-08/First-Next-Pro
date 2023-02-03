@@ -42,7 +42,7 @@ export async function getStaticProps(){
 
   return {
     props : {
-      albums : resData.slice(0,6)
+      albums : resData
     }
   }
 
