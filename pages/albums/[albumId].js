@@ -1,10 +1,17 @@
 import React from 'react'
 // import { useRouter } from 'next/router'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
+
 
 const Album = ({albums}) => {
   // const router = useRouter()
   // const id = router.query.albumId
+  const router = useRouter();
+  if(router.isFallback){
+    return <h1>Loading...</h1>
+  }
+
   return (
     <>
      <Head>
@@ -71,7 +78,7 @@ export async function getStaticPaths() {
 
     // ],
     paths : paths,
-    fallback : false,
+    fallback : true,
   }
 
 }
@@ -85,6 +92,12 @@ export async function getStaticProps(context){
   const response = await fetch(`https://jsonplaceholder.typicode.com/albums/${params.albumId}`)
 
   const resData = await response.json();
+
+  if(!resData.id){
+    return {
+      notFound: true,
+    }
+  }
 
 
   return {

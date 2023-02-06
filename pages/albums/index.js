@@ -10,7 +10,7 @@ const Product = ({albums}) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-    <h1 style={{textAlign: "center"}}>Dynamic Routing</h1> 
+    <h1 style={{textAlign: "center"}}>Dynamic Routing using Static Site Generation</h1> 
     <p style={{textAlign:"center", color:"red"}}>Click on any particulat list for dynamic routing</p>
     <br />
     {

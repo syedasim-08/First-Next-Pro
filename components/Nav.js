@@ -23,8 +23,13 @@ const Nav = () => {
         
     
     </li>
-    <li>
+    {/* <li>
         <Link href="/about">About</Link>
+
+    </li> */}
+
+    <li>
+        <Link href="/news">News</Link>
 
     </li>
     
