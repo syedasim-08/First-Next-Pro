@@ -32,6 +32,7 @@ const Nav = () => {
         <Link href="/news">News</Link>
 
     </li>
+  
     
 </ul>
  
